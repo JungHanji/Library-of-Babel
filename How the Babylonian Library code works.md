@@ -57,10 +57,7 @@ $$
 	2. The literal value is calculated by a simple algorithm:
 		1. If a letter from the text is contained in ASCII, the letter value is calculated as: the numeric equivalent of the letter minus 97 (the character code “a” in the ASCII table) $$C = (int)ch - 97$$
 		2. Otherwise, the literal value is equal to the index of that character in the literal set $$C = i$$
-	3. The letter value is added to the numeric value multiplied by the length of the letter set to the extent of *the letter index from the original text (i.e., loop iteration)*. 
-$$
-S = S + C \cdot charsetLen^{i}
-$$
+	3. The letter value is added to the numeric value multiplied by the length of the letter set to the extent of *the letter index from the original text (i.e., loop iteration)*. $$S = S + C \cdot charsetLen^{i}$$
 3. The address is calculated as the coordinate of the library section multiplied by the letter set length times the maximum number of characters per page plus the numerical representation of the text $$A = libCoord \cdot charsetLen^{maxCharsetLen} + S$$
 4. After the address is converted to 36-digit number system $$A = base(A, 36)$$
 
