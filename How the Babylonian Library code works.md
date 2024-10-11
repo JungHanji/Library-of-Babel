@@ -35,9 +35,7 @@ $$
 
 3. After the seed, the address itself is calculated. To do this, first the “link to the seed” is calculated by converting the seed into a 36-digit number system, where the characters are the sum of the English alphabet and 10 digits. And then the address is calculated as
 
-$$
-A = base(S, charsetLen)
-$$
+$$A = base(S, charsetLen)$$
 4. Then cases where the number of characters is less than the maximum number of characters per page are handled. This is done by setting the seed for the pseudo-random number generator, and then starting a loop that fills the free spaces in the text by adding a random letter from the letter set
 
 5. Cases where the number of characters is greater than the maximum number of characters per page are also handled. In this case, letters exceeding the limit are cut off from the result
@@ -59,7 +57,8 @@ $$
 		2. Otherwise, the literal value is equal to the index of that character in the literal set $$C = i$$
 	3. The letter value is added to the numeric value multiplied by the length of the letter set to the extent of *the letter index from the original text (i.e., loop iteration)*. $$S = S + C \cdot charsetLen^{i}$$
 3. The address is calculated as the coordinate of the library section multiplied by the letter set length times the maximum number of characters per page plus the numerical representation of the text $$A = libCoord \cdot charsetLen^{maxCharsetLen} + S$$
-4. After the address is converted to 36-digit number system $$A = base(A, 36)$$
+4. After the address is converted to 36-digit number system 
+$$A = base(A, 36)$$
 
 # Book titles
 
