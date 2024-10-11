@@ -36,6 +36,7 @@ $$
 3. After the seed, the address itself is calculated. To do this, first the “link to the seed” is calculated by converting the seed into a 36-digit number system, where the characters are the sum of the English alphabet and 10 digits. And then the address is calculated as
 
 $$A = base(S, charsetLen)$$
+
 4. Then cases where the number of characters is less than the maximum number of characters per page are handled. This is done by setting the seed for the pseudo-random number generator, and then starting a loop that fills the free spaces in the text by adding a random letter from the letter set
 
 5. Cases where the number of characters is greater than the maximum number of characters per page are also handled. In this case, letters exceeding the limit are cut off from the result
