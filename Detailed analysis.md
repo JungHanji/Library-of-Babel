@@ -24,7 +24,8 @@ We can go even further and assign a UID for a string, and even for a character l
 # What is a library address
 An address in a library consists of a concatenation of a UID and a seed, but as numbers rather than strings. This is used to ensure successful encoding and decoding of address to page and page to address. To do this, the following technique is used (when decoding, we are given the address):
 
-$$S = A - U\cdot C$$.
+$$S = A - U\cdot C$$
+
 Where *C* is some large constant number. This is how we “derive” seed from address (*A*) (using the property that $a + b = c, \implies b = c - a$).
 
 And since we made the location always be the same length in digits and digits, and then we shifted the location to the first digits, multiplying it by a constant, we can be sure that the UID and the seed will not “mix” with each other, since the seed will be on the last digits of the address, and we can be sure that when subtracting the location from the address we always got the 2 summand, which is the seed to the page.
@@ -32,11 +33,13 @@ And since we made the location always be the same length in digits and digits, a
 Accordingly it is not hard to guess how to get the address, knowing the seed and the location we can get the address in the library:
 
 $$A = S + U \cdot C$$
+
 ## How the constant *C* is calculated
 
 This constant is calculated as the *length of the character set for generating texts in the library* (hereafter referred to as *charset* ) times the *number of lines on the page, times the number of characters per line* (i.e. how many characters can fit on the page, simply put - maximum characters)
 
-$$C = S^{M}$$.
+$$C = S^{M}$$
+
 This formula was chosen because $S^M$$ is the maximum possible numerical representation of the page, i.e. *seed*. Since we need to make sure that the seed and location are not mixed up in the address, we shift the location by this number. Because even if the seed is the largest of all available this number will shift the location just to the next digit.
 # What is a seed for a page #
 
@@ -77,7 +80,7 @@ To calculate how many occurrences of a certain inscription in texts there are, w
 5. **Total number of appearances**:
    Then the total expected number of appearances in all texts will be:
    
-   $$ E_{total} = N \times E$$
+   $$E_{total} = N \times E$$
 
 6. **Approximate value**:
    If you need to specify the result as a power of 10, you can take the logarithm:
