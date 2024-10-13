@@ -77,17 +77,12 @@ To calculate how many occurrences of a certain inscription in texts there are, w
    
    $$E = P \times (L - M + 1)$$
 
-5. **Total number of appearances**:
-   Then the total expected number of appearances in all texts will be:
-   
-   $$E_{total} = N \times E$$
 
-6. **Approximate value**:
-   If you need to specify the result as a power of 10, you can take the logarithm:
+5. **Total number of appearances**:
+   Then the logarithm of the expected number of appearances in all texts of the desired phrase will be:
    
-   $$n \approx \log_{10}(E_{total})$$
-   
-   and round it to the nearest whole number.
+   $$n = \log_{10}(N) + log_{10}(E)$$
+
 
 You will thus get a value of $10^n$$, which will represent the approximate number of occurrences of the searched inscription in the texts.
 
