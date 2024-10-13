@@ -66,7 +66,7 @@ To calculate how many occurrences of a certain inscription in texts there are, w
 
 3. **Probability of occurrence of an inscription**:
    Assuming that the characters are uniformly and independently distributed, the probability of occurrence of the desired inscription in a single text can be estimated as:
-   $$ P = \frac{L - M + 1}{L}$$
+   $$P = \frac{L - M + 1}{L}$$
    This is the number of possible positions where the inscription can start, divided by the total number of characters.
 
 4. **Expected number of appearances**:
@@ -77,7 +77,7 @@ To calculate how many occurrences of a certain inscription in texts there are, w
 5. **Total number of appearances**:
    Then the total expected number of appearances in all texts will be:
    
-   $$ E_{total} = N \times E $$
+   $$ E_{total} = N \times E$$
 
 6. **Approximate value**:
    If you need to specify the result as a power of 10, you can take the logarithm:
