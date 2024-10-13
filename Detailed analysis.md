@@ -7,7 +7,7 @@
 7. How to calculate how many pages with a given text are approximately
 
 # The library device
-The Library of Babel is a mathematical idea that states that there exists a “library” containing all existing variants of 29 symbols (English alphabet + period, comma and space). These variants are enclosed in “books” of 410 pages with 40 lines and 80 characters in each line. The most important law of the library is that there are no repeating books, each book is unique. Thus, the number of books is equal to the number of possible permutations $410 \cdot 40 \cdot 80 = $1'312'000$, i.e. $2^{1312000}$. This number is also called the Borges number
+The Library of Babel is a mathematical idea that states that there exists a “library” containing all existing variants of 29 symbols (English alphabet + period, comma and space). These variants are enclosed in “books” of 410 pages with 40 lines and 80 characters in each line. The most important law of the library is that there are no repeating books, each book is unique. Thus, the number of books is equal to the number of possible permutations $410 \cdot 40 \cdot 80$ = $1'312'000$, i.e. $2^{1312000}$. This number is also called the Borges number
 
 A library consists of rooms, each room has 4 walls, each wall has 5 shelves and each shelf contains 32 books.
 
